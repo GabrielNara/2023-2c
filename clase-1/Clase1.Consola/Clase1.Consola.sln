@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase1.Consola", "Clase1.Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase1.UnitTests", "Clase1.UnitTests\Clase1.UnitTests.csproj", "{63728B36-0EBE-4146-B139-533E7F9706F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase1.Tarea", "Clase1.Tarea\Clase1.Tarea.csproj", "{029A71D4-2745-4C86-80DE-1F7848644B1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase1.Tarea", "Clase1.Tarea\Clase1.Tarea.csproj", "{029A71D4-2745-4C86-80DE-1F7848644B1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,7 +15,7 @@ interface IJuegoAdivinanza
 
 public class JuegoAdivinanza : IJuegoAdivinanza
 {
-    private int numeroIngresado;
+    private int numeroIngresado=0;
     private readonly IInputLector inputLector;
 
     public JuegoAdivinanza(IInputLector inputLector)
@@ -36,8 +36,8 @@ public class JuegoAdivinanza : IJuegoAdivinanza
         {
             this.numeroIngresado = Int32.Parse(inputLector.LeerEntrada());
 
-            // int distancia = Math.Abs(numeroIngresado - numeroAleatorio);
-            int distancia = numeroIngresado - numeroAleatorio;
+            int distancia = Math.Abs(numeroIngresado - numeroAleatorio);
+          
 
             if(distancia == 0)
             {
@@ -47,11 +47,11 @@ public class JuegoAdivinanza : IJuegoAdivinanza
             {
                 Console.WriteLine("Estás frío, vuelve a ingresar un numero.");
             }
-            else if (distancia <= 40 &&  distancia >20)
+            else if (distancia > 20)
             {
                 Console.WriteLine("Estás tibio, vuelve a ingresar un numero.");
             }
-            else if (distancia <=20 && distancia >=5)
+            else if (distancia > 5)
             {
                 Console.WriteLine("Estás caliente, vuelve a ingresar un numero.");
             }
