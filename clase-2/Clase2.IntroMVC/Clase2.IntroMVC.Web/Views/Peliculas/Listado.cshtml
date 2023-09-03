@@ -1,0 +1,22 @@
+﻿@using Clase2.IntroMVC.Entidades;
+@model List<Pelicula>
+@{
+}
+
+<h1>Listado de Peliculas</h1>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Genero</th>
+        <th>Plataformas</th>
+    </tr>
+
+    @foreach (Pelicula pelicula in Model)
+    {
+        <tr>
+            <td>@pelicula.Nombre</td>
+            <td>@pelicula.Genero</td>
+            <td>@Html.Partial("_PlataformaPartial", pelicula)</td>
+        </tr>
+    }
+</table>
