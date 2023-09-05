@@ -19,7 +19,8 @@ namespace Clase2.IntroMVC.Web.Controllers
         [HttpPost]
         public IActionResult Agregar(Pelicula pelicula)
         {
-           pelicula.EstaEnStarPlus = Request.Form["EstaEnStarPlus"] == "on";
+            pelicula.NominadaAlOscar = Request.Form["NominadaAlOscar"] == "on";
+            pelicula.EstaEnStarPlus = Request.Form["EstaEnStarPlus"] == "on";
             pelicula.EstaEnNetflix = Request.Form["EstaEnNetflix"] == "on";
             pelicula.EstaEnHBO = Request.Form["EstaEnHBO"] == "on";
             pelicula.EstaEnDisney = Request.Form["EstaEnDisney"] == "on";
@@ -32,6 +33,32 @@ namespace Clase2.IntroMVC.Web.Controllers
         {
             var peliculas = _peliculasRepositorio.ObtenerTodas();
             return View(peliculas);
+        }
+
+        public IActionResult Actualizar(int id)
+        {
+            var pelicula = _peliculasRepositorio.ObtenerPorId(id);
+            return pelicula != null ? View(pelicula) : RedirectToAction("Listado");
+        }
+
+        [HttpPost]
+        public IActionResult Actualizar(Pelicula pelicula)
+        {
+            pelicula.NominadaAlOscar = Request.Form["NominadaAlOscar"] == "on";
+            pelicula.EstaEnStarPlus = Request.Form["EstaEnStarPlus"] == "on";
+            pelicula.EstaEnNetflix = Request.Form["EstaEnNetflix"] == "on";
+            pelicula.EstaEnHBO = Request.Form["EstaEnHBO"] == "on";
+            pelicula.EstaEnDisney = Request.Form["EstaEnDisney"] == "on";
+            pelicula.EstaEnAmazon = Request.Form["EstaEnAmazon"] == "on";
+            _peliculasRepositorio.Actualizar(pelicula);
+            return RedirectToAction("Listado");
+        }
+
+
+        public IActionResult Eliminar(int id)
+        {
+            _peliculasRepositorio.Eliminar(id);
+            return RedirectToAction("Listado");
         }
 
     }

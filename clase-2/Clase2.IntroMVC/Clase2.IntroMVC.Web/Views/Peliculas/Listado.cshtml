@@ -17,6 +17,10 @@
             <td>@pelicula.Nombre</td>
             <td>@pelicula.Genero</td>
             <td>@Html.Partial("_PlataformaPartial", pelicula)</td>
+            <td>
+                @Html.ActionLink("Actualizar", "Actualizar", new { id = pelicula.Id })
+                @Html.ActionLink("Eliminar", "Eliminar", new { id = pelicula.Id })
+            </td>
         </tr>
     }
 </table>
