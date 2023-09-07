@@ -36,16 +36,14 @@ public class SeriesController : Controller
         return View(series);
     }
 
-   
-    public IActionResult Actualizar(int id)
+    public IActionResult Editar(int id)
     {
         var serie = _seriesRepositorio.ObtenerPorId(id);
         return serie != null ? View(serie) : RedirectToAction("Listado");
     }
 
     [HttpPost]
-    public IActionResult Actualizar(Serie serie)
-
+    public IActionResult Editar(Serie serie)
     {
         int cantTemporadas = int.Parse(string.IsNullOrEmpty(Request.Form["CantidadDeTemporadas"]) ? "0" : Request.Form["CantidadDeTemporadas"]);
 
@@ -58,16 +56,9 @@ public class SeriesController : Controller
         return RedirectToAction("Listado");
     }
 
-    
     public IActionResult Eliminar(int id)
     {
         _seriesRepositorio.Eliminar(id);
-         return RedirectToAction("Listado");
+        return RedirectToAction("Listado");
     }
-
-
-
-
-
-
 }

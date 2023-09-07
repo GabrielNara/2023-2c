@@ -10,10 +10,10 @@ public interface IPeliculasRepositorio
     void Actualizar(Pelicula pelicula);
     void Eliminar(int id);
 }
-
-public class   PeliculasRepositorio : IPeliculasRepositorio
+public class PeliculasRepositorio : IPeliculasRepositorio
 {
     private static List<Pelicula> _peliculas = new List<Pelicula>();
+
     public List<Pelicula> ObtenerTodas()
     {
         return _peliculas;
@@ -22,8 +22,6 @@ public class   PeliculasRepositorio : IPeliculasRepositorio
     public void Agregar(Pelicula pelicula)
     {
         pelicula.Id = _peliculas.Count + 1;
-     
-
         _peliculas.Add(pelicula);
     }
 
@@ -38,13 +36,12 @@ public class   PeliculasRepositorio : IPeliculasRepositorio
 
         if (peliculaExistente == null)
         {
-            throw new ArgumentException($"No se encontro la pelicula con id {pelicula.Id}");
+            throw new ArgumentException($"No se encontró la pelicula con id {pelicula.Id}");
         }
         
-        peliculaExistente.Nombre = pelicula.Nombre;
+        peliculaExistente.Titulo = pelicula.Titulo;
         peliculaExistente.Genero = pelicula.Genero;
-        peliculaExistente.Descripcion = pelicula.Descripcion;
-        peliculaExistente.Año = pelicula.Año;
+        peliculaExistente.Anio = pelicula.Anio;
         peliculaExistente.Presupuesto = pelicula.Presupuesto;
         peliculaExistente.Recaudacion = pelicula.Recaudacion;
         peliculaExistente.ImagenUrl = pelicula.ImagenUrl;
@@ -59,9 +56,12 @@ public class   PeliculasRepositorio : IPeliculasRepositorio
     public void Eliminar(int id)
     {
         var peliculaExistente = ObtenerPorId(id);
+
         if (peliculaExistente == null)
-            return;
-        
+        {
+            throw new ArgumentException($"No se encontro la pelicula con id {id}");
+        }
+
         _peliculas.Remove(peliculaExistente);
-    }
+    }   
 }
