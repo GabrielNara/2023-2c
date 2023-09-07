@@ -35,7 +35,7 @@ public class SeriesRepositorio : ISeriesRepositorio
         return _series.FirstOrDefault(serie => serie.Id == id);
     }
 
-    public void Actualizar(Serie serie, int cantTemporadas)
+    public void Actualizar(Serie serie, int cantidadTemporadas)
     {
         var serieExistente = ObtenerPorId(serie.Id);
 
@@ -55,7 +55,7 @@ public class SeriesRepositorio : ISeriesRepositorio
         serieExistente.EstaEnHBO = serie.EstaEnHBO;
         serieExistente.Temporadas = new List<Temporada>();
         serieExistente.Temporadas
-            .AddRange(Enumerable.Range(1, cantTemporadas)
+            .AddRange(Enumerable.Range(1, cantidadTemporadas)
             .Select(nro => new Temporada { Nro = nro }));
     }
 
