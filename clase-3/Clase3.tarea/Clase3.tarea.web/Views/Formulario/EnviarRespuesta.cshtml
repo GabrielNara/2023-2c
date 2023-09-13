@@ -11,40 +11,41 @@
     <label>Selecciona el diseño:</label>
     <input type="radio" id="oceano" value="oceano" /> Oceano
     <input type="radio" id="volcan" value="volcan" /> Volcan
+
 </div>
 
 
-<form action="/Formulario/EnviarRespuesta" method="post">
+    <form action="/Formulario/EnviarRespuesta" method="post">
+        <div>
+            <label>Nombre:</label>
+            <input type="text" asp-for="Nombre" value="@Model.Nombre" />
+            <span asp-validation-for="@Model.Nombre" class="text-danger"></span>
+        </div>
+        <div>
+            <label>Apellido:</label>
+            <input type="text" asp-for="Apellido" value="@Model.Apellido" />
+            <span asp-validation-for="@Model.Apellido" class="text-danger"></span>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="text" asp-for="Email" value="@Model.Email" />
+            <span asp-validation-for="@Model.Email" class="text-danger"></span>
+        </div>
+        <div>
+            <label>Contraseña:</label>
+            <input type="password" asp-for="Contraseña" />
+            <span asp-validation-for="@Model.Contraseña" class="text-danger"></span>
+        </div>
+        <div>
+            <label>Confirmar Contraseña:</label>
+            <input type="password" asp-for="ConfirmarContraseña" />
+            <span asp-validation-for="@Model.ConfirmarContraseña" class="text-danger"></span>
+        </div>
 
-    
-    <div>
-        <label>Nombre:</label>
-        <input type="text" asp-for="Nombre" value="@Model.Nombre" />
-        <span asp-validation-for="@Model.Nombre" class="text-danger"></span>
-    </div>
-    <div>
-        <label>Apellido:</label>
-        <input type="text" asp-for="Apellido" value="@Model.Apellido" />
-        <span asp-validation-for="@Model.Apellido" class="text-danger"></span>
-    </div>
-    <div>
-        <label>Email:</label>
-        <input type="text" asp-for="Email" value="@Model.Email" />
-        <span asp-validation-for="@Model.Email" class="text-danger"></span>
-    </div>
-    <div>
-        <label>Contraseña:</label>
-        <input type="password" asp-for="Contraseña" />
-        <span asp-validation-for="@Model.Contraseña" class="text-danger"></span>
-    </div>
-    <div>
-        <label>Confirmar Contraseña:</label>
-        <input type="password" asp-for="ConfirmarContraseña" />
-        <span asp-validation-for="@Model.ConfirmarContraseña" class="text-danger"></span>
-    </div> 
+        <div>
+            <input type="submit" value="Registrar" />
+        </div>
+    </form>
 
-    <div>
-        <input type="submit" value="Registrar" />
-    </div>
-</form>
+
 

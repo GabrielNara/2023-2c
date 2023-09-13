@@ -24,7 +24,6 @@ namespace Clase3.tarea.web.Models
         [Compare("Contraseña", ErrorMessage = "Las contraseñas no coinciden")]
         public string ConfirmarContraseña { get; set; }
 
-       // public string EleccionLayout { get; set; }
 
     }
 }
