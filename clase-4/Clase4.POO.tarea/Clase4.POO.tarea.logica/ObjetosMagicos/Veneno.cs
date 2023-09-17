@@ -20,5 +20,13 @@ namespace Clase4.POO.tarea.Logica.ObjetosMagicos
             personaje.XP -= 5;
         }
 
+        public void UsarVeneno(Personaje personaje)
+        {
+         
+            // Lógica para aplicar el efecto al personaje
+            personaje.HP -= 10;
+            personaje.XP -= 5;
+        }
+
     }
 }

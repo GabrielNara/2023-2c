@@ -3,7 +3,7 @@ using Clase4.POO.tarea.Logica.Servicios;
 using Clase4.POO.tarea.WebApi.Requests;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Clase4.POO.tarea.WebApi.Controllers;
+namespace Clase4.POO.WebApi.Controllers;
 
 [ApiController]
 [Route("api/armas")]
@@ -18,7 +18,7 @@ public class ArmasController : ControllerBase
     // Propiedad estática para almacenar la información de las armas
     private static List<Arma> armas = new List<Arma>
     {
-        new Arma(1, "Espada", 20),
+        new Arma(1, "Hacha", 20),
         new Arma (2, "Arco", 15 )
     };
 

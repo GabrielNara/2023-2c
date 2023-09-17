@@ -2,7 +2,7 @@
 using Clase4.POO.tarea.Logica.Servicios;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Clase4.POO.tarea.WebApi.Controllers;
+namespace Clase4.POO.WebApi.Controllers;
 
 [ApiController]
 [Route("api/personajes")]

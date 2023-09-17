@@ -9,6 +9,7 @@ namespace Clase4.POO.tarea.Logica.ObjetosMagicos
         {
         }
 
+        
         public void Usar(Personaje personaje)
         {
             Console.WriteLine($"{personaje.Nombre} usa {Nombre} y recupera 10 puntos de vida.");
@@ -16,5 +17,15 @@ namespace Clase4.POO.tarea.Logica.ObjetosMagicos
             personaje.HP += 10;
             personaje.XP += 5;
         }
+
+
+        public void UsarPocion(Personaje personaje)
+        {
+            // Lógica para aplicar el efecto al personaje
+            personaje.HP += 10;
+            personaje.XP += 5;
+        }
+
+
     }
 }
