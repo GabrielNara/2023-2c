@@ -15,10 +15,11 @@ public class ObjetoMagico : IItem
         Efecto = efecto;
     }
 
-    public void Usar(Personaje personaje)
+    public virtual void Usar(Personaje personaje)
     {
         Console.WriteLine($"{personaje.Nombre} usa {Nombre} y recupera 10 puntos de vida.");
     }
+
 
     // Dentro de la clase ObjetoMagico
     public void Actualizar(ObjetoMagico nuevoObjeto)

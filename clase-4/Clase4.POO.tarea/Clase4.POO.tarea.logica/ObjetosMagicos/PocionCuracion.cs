@@ -10,7 +10,7 @@ namespace Clase4.POO.tarea.Logica.ObjetosMagicos
         }
 
         
-        public void Usar(Personaje personaje)
+        public override void Usar(Personaje personaje)
         {
             Console.WriteLine($"{personaje.Nombre} usa {Nombre} y recupera 10 puntos de vida.");
             // Lógica para aplicar el efecto al personaje
