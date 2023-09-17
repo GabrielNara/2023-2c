@@ -4,11 +4,13 @@ namespace Clase4.POO.tarea.Logica.ObjetosMagicos;
 
 public class ObjetoMagico : IItem
 {
+    public int Id { get; set; }
     public string Nombre { get; }
     public string Efecto { get; }
 
-    public ObjetoMagico(string nombre, string efecto)
+    public ObjetoMagico(int id,string nombre, string efecto)
     {
+        Id = id;
         Nombre = nombre;
         Efecto = efecto;
     }

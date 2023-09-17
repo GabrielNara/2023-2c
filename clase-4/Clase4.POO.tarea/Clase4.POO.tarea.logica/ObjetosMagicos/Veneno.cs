@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Clase4.POO.tarea.Logica.ObjetosMagicos
 {
-    internal class Veneno : ObjetoMagico, IItem
+    public class Veneno : ObjetoMagico, IItem
     {
-        public Veneno(string nombre, string efecto) : base(nombre, efecto)
+        public Veneno(int id,string nombre, string efecto) : base(id,nombre, efecto)
         {
         }
         public void Usar(Personaje personaje)

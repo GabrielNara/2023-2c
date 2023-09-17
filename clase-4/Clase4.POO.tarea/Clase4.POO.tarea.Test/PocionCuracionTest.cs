@@ -9,7 +9,7 @@ namespace Clase4.POO.tarea.Test
         public void Usar_Ok()
         {
             // Arrange
-            var pocionCuracion = new PocionCuracion("Poción de curación", "Recupera 10 puntos de vida.");
+            var pocionCuracion = new PocionCuracion(1,"Poción de curación", "Recupera 10 puntos de vida.");
             var personaje = new Personaje("Gandalf", 100, 100);
             var vidaEsperada = 110;
             var experienciaEsperada = 105;

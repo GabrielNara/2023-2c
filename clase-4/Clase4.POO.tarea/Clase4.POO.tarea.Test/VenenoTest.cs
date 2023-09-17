@@ -14,13 +14,13 @@ namespace Clase4.POO.tarea.Test
         public void Usar_Ok()
         {
             // Arrange
-            var pocionCuracion = new PocionCuracion("Poción de curación", "Recupera 10 puntos de vida.");
+            var veneno = new Veneno(1,"Pocion venenosa", "Quita 10 puntos de vida.");
             var personaje = new Personaje("Gandalf", 100, 100);
-            var vidaEsperada = 110;
-            var experienciaEsperada = 105;
+            var vidaEsperada = 90;
+            var experienciaEsperada = 95;
 
             // Act
-            pocionCuracion.Usar(personaje);
+            veneno.Usar(personaje);
 
             // Assert
             Assert.Equal(vidaEsperada, personaje.HP);
