@@ -4,6 +4,7 @@ namespace Clase4.POO.tarea.Logica.ObjetosMagicos
 {
     public class PocionCuracion : ObjetoMagico, IItem
     {
+        //Aca hereda el constructor base
         public PocionCuracion(string nombre, string efecto) : base(nombre, efecto)
         {
         }
