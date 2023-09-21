@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Clase5.Modelo1erParcial.Logica\Clase5.Modelo1erParcial.Logica.csproj" />
+    <ProjectReference Include="..\Clase5.Modelo1erParcial.Logica\Clase5.Modelo.Logica.csproj" />
   </ItemGroup>
 
 </Project>

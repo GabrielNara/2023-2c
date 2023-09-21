@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase5.Modelo1erParcial.Web", "Clase5.Modelo1erParcial.Web\Clase5.Modelo1erParcial.Web.csproj", "{E3D242F6-3543-48C8-A61D-A6B3B74A80E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase5.Modelo.Web", "Clase5.Modelo1erParcial.Web\Clase5.Modelo.Web.csproj", "{E3D242F6-3543-48C8-A61D-A6B3B74A80E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase5.Modelo1erParcial.Logica", "Clase5.Modelo1erParcial.Logica\Clase5.Modelo1erParcial.Logica.csproj", "{3859C8FF-28F8-4F92-94DB-39A153873AC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase5.Modelo.Logica", "Clase5.Modelo1erParcial.Logica\Clase5.Modelo.Logica.csproj", "{3859C8FF-28F8-4F92-94DB-39A153873AC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
