@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<Pw32cIslaTesoroContext>();
 builder.Services.AddScoped<ITesoroServicio, TesoroServicio>();
+builder.Services.AddScoped<IUbicacionServicio, UbicacionServicio>();
 
 var app = builder.Build();
 
