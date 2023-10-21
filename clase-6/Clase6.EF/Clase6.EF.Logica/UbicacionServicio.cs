@@ -1,9 +1,11 @@
-﻿using Clase6.EF.Data.EF;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Clase6.EF.Data.EF;
+
 
 namespace Clase6.EF.Logica;
 
@@ -12,19 +14,21 @@ public interface IUbicacionServicio
     void Agregar(Ubicacion ubicacion);
     List<Ubicacion> ObtenerTodos();
     Ubicacion ObtenerPorId(int id);
+    Ubicacion ObtenerPorNombre(string nombre);
     void Actualizar(Ubicacion ubicacion);
     void Eliminar(int id);
 }
 
 public class UbicacionServicio : IUbicacionServicio
 {
-    private Pw32cIslaTesoroContext _context;
+
+    private readonly Pw32cIslaTesoroContext _context;
+
 
     public UbicacionServicio(Pw32cIslaTesoroContext context)
     {
         this._context = context;
     }
-
 
     public void Actualizar(Ubicacion ubicacion)
     {
@@ -49,13 +53,22 @@ public class UbicacionServicio : IUbicacionServicio
         this._context.SaveChanges();
     }
 
-    public Ubicacion ObtenerPorId(int id)
+
+    public Ubicacion? ObtenerPorId(int id)
     {
         return this._context.Ubicacions.Find(id);
+    }
+
+
+    public Ubicacion? ObtenerPorNombre(string nombre)
+    {
+        return this._context.Ubicacions.FirstOrDefault(x => x.Nombre == nombre);
     }
 
     public List<Ubicacion> ObtenerTodos()
     {
         return this._context.Ubicacions.ToList();
     }
+
 }
+
