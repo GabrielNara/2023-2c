@@ -60,11 +60,6 @@ public class UbicacionServicio : IUbicacionServicio
             this._context.SaveChanges();
         }
 
-        public Ubicacion? ObtenerPorId(int id)
-        {
-            return this._context.Ubicacions.Find(id);
-        }
-
         public Ubicacion? ObtenerPorNombre(string nombre)
         {
             return this._context.Ubicacions.FirstOrDefault(x => x.Nombre == nombre);
